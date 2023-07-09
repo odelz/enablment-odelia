@@ -38,6 +38,10 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+
+  --font-primary: 'PT Serif', serif; /* Add this line to define the primary font */
+
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -45,26 +49,6 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
 
     --callout-rgb: 20, 20, 20;
     --callout-border-rgb: 108, 108, 108;
@@ -86,13 +70,10 @@ body {
 }
 
 body {
+  font-family: var(--font-primary); /* Apply the primary font to the body */
+
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
 }
 
 a {
@@ -105,3 +86,114 @@ a {
     color-scheme: dark;
   }
 }
+
+.grid-container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.container {
+  margin-top:20px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.column {
+  margin: 0 10px; 
+}
+
+.upper-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.lower-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.user-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+
+}
+.name {
+  margin-bottom: 5px 0;
+}
+
+.website {
+  font-size: x-large;
+  margin: 10px 0;
+}
+
+.follow-button {
+  width:72px;
+  height:24px;
+  font-size: x-small;
+  color: white;
+  background-color:#DD0A0A;
+  font-size: 14px;
+  border-radius: 10%;
+  border: none;
+}
+.photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.follow-button {
+  margin-top: 10px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  margin-left: 10px;
+}
+
+
+.bio {
+  font-size: small;
+  flex-direction: row;
+}
+
+
+
+
+
+
+
+
